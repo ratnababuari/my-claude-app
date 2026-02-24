@@ -136,7 +136,9 @@ for key, val in [("response", None), ("current_emoji", "🎲"), ("button_count",
 # ─── Sidebar ───────────────────────────────────────────────────────────────────
 with st.sidebar:
     st.markdown("### ⚙️ Setup")
-    api_key = st.text_input("🔑 Groq API Key", type="password", placeholder="Paste your key here...")
+    #api_key = st.text_input("🔑 Groq API Key", type="password", placeholder="Paste your key here...")
+    api_key=st.secrets["GROQ_API_KEY"]
+
     st.markdown("Get free key → [console.groq.com](https://console.groq.com)")
     st.markdown("---")
     st.markdown("### 🤖 Choose Model")
